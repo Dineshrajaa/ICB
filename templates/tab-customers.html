@@ -1,0 +1,39 @@
+<ion-view view-title="Customers">
+    <ion-nav-buttons side="right">
+        <button class="button button-royal" ng-click="openModal();"><i class="icon ion-ios-personadd"></i></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <ion-list>
+            <ion-item ng-repeat="customers in customersArray">Name:{{customers.name}}<br/>ShopName:{{customers.shop_name}}<br/>Phone:{{customers.phone}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<script id="add-customer.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar-royal">
+            <h1 class="title">Add Customer</h1>
+            <button class="button button-assertive" ng-click="closeModal();"><i class="icon ion-close-round">Close</i>
+            </button>
+        </ion-header-bar>
+        <ion-content class="padding" ng-controller="addCustomerCtrl">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input type="text" ng-model="customer.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Shop Name</span>
+                    <input type="text" ng-model="customer.shopname">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Phone Number</span>
+                    <input type="number" ng-model="customer.phone">
+                </label>
+                <div class="button-bar">
+                    <button class="button button-balanced" ng-click="addCustomer();">Save</button>
+                    <button class="button button-assertive">Reset</button>
+                </div>
+            </ion-list>
+        </ion-content>
+    </ion-modal-view>
+</script>
