@@ -51,7 +51,8 @@ angular.module('starter', ['ionic', 'icb.controllers', 'icb.services'])
             url: '/products',
             views: {
                 'tab-products': {
-                    templateUrl: 'templates/tab-products.html'
+                    templateUrl: 'templates/tab-products.html',
+                    controller: 'productsCtrl'
                 }
             }
         })
@@ -70,7 +71,7 @@ angular.module('starter', ['ionic', 'icb.controllers', 'icb.services'])
         views: {
             'tab-bills': {
                 templateUrl: 'templates/tab-bills.html'
-                //controller: 'billsCtrl'
+                    //controller: 'billsCtrl'
             }
         }
     });
