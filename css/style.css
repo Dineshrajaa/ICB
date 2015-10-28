@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+
+.colorpicker {
+    width: 60px;
+    height: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    background: gray;
+}

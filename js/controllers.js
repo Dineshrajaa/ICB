@@ -56,37 +56,65 @@ angular.module('icb.controllers', [])
         };
         customerService.addCustomer(customer).then(function(affectedrows) {
             $scope.closeModal();
-            var createPopup = $ionicPopup.alert({
+            var createCustomerPopup = $ionicPopup.alert({
                 title: 'Success',
                 template: 'Added new Customer Successfully'
             });
-            createPopup.then(function(res) {
+            createCustomerPopup.then(function(res) {
                 console.log('Added new Customer Successfully');
             });
         });
     };
 })
 
-.controller('productsCtrl', function($scope, $q, $ionicModal, customerService) {
-    $scope.productsArray=[];
-    $ionicModal.fromTemplateUrl('add-product.html',{
-        scope:$scope,
-        animation:"slide-in-up"
-    }).then(function(modal){
-        $scope.modal=modal;
+.controller('productsCtrl', function($scope, $q, $ionicModal, productService) {
+    $scope.productsArray = [];
+    $ionicModal.fromTemplateUrl('add-product.html', {
+        scope: $scope,
+        animation: "slide-in-up"
+    }).then(function(modal) {
+        $scope.modal = modal;
     });
-    
-    $scope.openModal=function(){
+
+    $scope.openModal = function() {
         $scope.modal.show();
     };
-    $scope.closeModal=function(){
+    $scope.closeModal = function() {
         $scope.modal.hide();
+        $scope.listProducts();
     };
 
+    $scope.listProducts = function() {
+        productService.listAllProducts().then(function(products) {
+            $scope.productsArray = [].concat(products);
+        });
+    };
+    $scope.listProducts();
 })
 
-.controller('addProductCtrl',function($scope,$ionicPopup,customerService){
-    
+.controller('addProductCtrl', function($scope, $ionicPopup, productService) {
+
+    $scope.addProduct = function() {
+
+        var product = {
+            "pname": $scope.products.pname,
+            "pcount": $scope.products.pcount,
+            "pprice": $scope.products.pprice,
+            "pcolor": $scope.products.pcolor
+        };
+        productService.addProduct(product).then(function(affectedrows) {
+            $scope.closeModal();
+            var createProductPopup = $ionicPopup.alert({
+                title: 'Success',
+                template: 'Added new Product Successfully'
+            });
+            createProductPopup.then(function(res) {
+                console.log("Added new Product Successfully");
+            });
+        });
+    };
+
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

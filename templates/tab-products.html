@@ -4,6 +4,12 @@
     </ion-nav-buttons>
     <ion-content>
         <ion-list>
+            <ion-item ng-repeat="products in productsArray">
+                Product Name:{{products.pname}}
+                <br/> Product Count:{{products.pcount}}
+                <br/> Product Price:{{products.pprice}}
+                <br/> Product Color:{{products.pcolor}}
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>
@@ -15,18 +21,25 @@
         </ion-header-bar>
         <ion-content class="padding" ng-controller="addProductCtrl">
             <ion-list>
-                <ion-item class="item-input">
+                <label class="item item-input">
                     <span class="input-label">Product Name</span>
-                    <input type="text" ng-model="product.name" />
-                </ion-item>
-                <ion-item class="item-input">
+                    <input type="text" ng-model="products.pname" />
+                </label>
+                <label class="item item-input">
                     <span class="input-label">Count</span>
-                    <input type="text" ng-model="product.count" />
-                </ion-item>
-                <ion-item class="item-input">
+                    <input type="text" ng-model="products.pcount" />
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Price</span>
+                    <input type="text" ng-model="products.pprice" />
+                </label>
+                <label class="item item-input">
                     <span class="input-label">Color</span>
-                    <input type="text" ng-model="product.color" />
-                </ion-item>
+                    <select ng-model="products.pcolor">
+                        <option value="green"><strong>G</strong>reen</option>
+                        <option value="white"><strong>W</strong>hite</option>
+                    </select>
+                </label>
                 <div class="button-bar">
                     <button class="button button-balanced" ng-click="addProduct();">Save</button>
                     <button class="button button-assertive">Reset</button>
