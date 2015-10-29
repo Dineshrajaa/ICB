@@ -64,3 +64,7 @@ angular.module('icb.services', [])
       listAllProducts:getProducts
     };
 })
+
+.factory('billService',function($q){
+
+});

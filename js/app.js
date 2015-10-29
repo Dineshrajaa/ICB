@@ -48,30 +48,21 @@ angular.module('starter', ['ionic', 'icb.controllers', 'icb.services'])
     })
 
     .state('tab.products', {
-            url: '/products',
-            views: {
-                'tab-products': {
-                    templateUrl: 'templates/tab-products.html',
-                    controller: 'productsCtrl'
-                }
+        url: '/products',
+        views: {
+            'tab-products': {
+                templateUrl: 'templates/tab-products.html',
+                controller: 'productsCtrl'
             }
-        })
-        .state('tab.chat-detail', {
-            url: '/chats/:chatId',
-            views: {
-                'tab-chats': {
-                    templateUrl: 'templates/chat-detail.html',
-                    controller: 'ChatDetailCtrl'
-                }
-            }
-        })
+        }
+    })
 
     .state('tab.bills', {
         url: '/bills',
         views: {
             'tab-bills': {
-                templateUrl: 'templates/tab-bills.html'
-                    //controller: 'billsCtrl'
+                templateUrl: 'templates/tab-bills.html',
+                controller: 'billsCtrl'
             }
         }
     });

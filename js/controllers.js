@@ -117,12 +117,32 @@ angular.module('icb.controllers', [])
 
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
+.controller('billsCtrl', function($scope, $q, $ionicModal, customerService) {
+    $scope.customersArray=[];
+    $ionicModal.fromTemplateUrl('add-bill.html',{
+        scope:$scope,
+        animation:"slide-in-up"
+    }).then(function(modal){
+        $scope.modal=modal;
+    });
+
+    $scope.openModal=function(){
+        $scope.modal.show();
+    };
+
+    $scope.closeModal=function(){
+        $scope.modal.hide();
+    };
+    $scope.listAllCustomers = function() {
+        customerService.listAllCustomers().then(function(customers) {
+            $scope.customersArray = [].concat(customers);
+            console.log($scope.customersArray);
+        });
+    };
+    $scope.listAllCustomers();
+
 })
 
-.controller('AccountCtrl', function($scope) {
-    $scope.settings = {
-        enableFriends: true
-    };
-});
+.controller('addBillCtrl', function($scope) {
+    
+})
