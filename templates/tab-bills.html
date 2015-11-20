@@ -16,11 +16,18 @@
         <ion-content ng-controller="addBillCtrl">
             <ion-list>
                 <label class="item item-input">
-                <span class="input-label">To</span>
-                <select ng-model="bill.customer">
-                    <option ng-repeat='customer in customersArray' value="{{customer.id}}">{{customer.shop_name}}</option>
-                </select>
+                    <span class="input-label">To</span>
+                    <select ng-model="bill.customer">
+                        <option ng-repeat='customer in customersArray' value="{{customer.id}}">{{customer.shop_name}}</option>
+                    </select>
                 </label>
+                <label class="item item-input" ng-repeat='product in productsArray'>
+                    <span class="input-label">{{product.pcount}}{{product.pname}}</span>
+                    <span class="input-label">{{product.pprice}}</span>
+                    <input type="text" ng-model="product.pquantity" ng-value="0" />
+                    <span class="input-label">{{product.pprice*product.pquantity ||0}}</span>
+                </label>
+                <label class="item item-input" style="float:right;">Total:{{sumUp()}}</label>
             </ion-list>
         </ion-content>
     </ion-modal-view>

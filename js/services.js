@@ -40,31 +40,32 @@ angular.module('icb.services', [])
 .factory('productService', function($q) {
 
     function createProduct(product) {
+
         var deferred = $q.defer();
         var insertQuery = "INSERT INTO products SET ?";
         connection.query(insertQuery, product, function(err, res) {
+            if (err) deferred.reject(err);
+            deferred.resolve(res);                       
+        });
+        return deferred.promise;
+    }
+
+    function getProducts() {
+        var deferred = $q.defer();
+        var selectQuery = "SELECT * FROM products";
+        connection.query(selectQuery, function(err, res) {
             if (err) deferred.reject(err);
             deferred.resolve(res);
         });
         return deferred.promise;
     }
 
-    function getProducts(){
-      var deferred=$q.defer();
-      var selectQuery="SELECT * FROM products";
-      connection.query(selectQuery,function(err,res){
-        if(err) deferred.reject(err);
-        deferred.resolve(res);
-      });
-      return deferred.promise;
-    }
-
-    return{
-      addProduct:createProduct,
-      listAllProducts:getProducts
+    return {
+        addProduct: createProduct,
+        listAllProducts: getProducts
     };
 })
 
-.factory('billService',function($q){
+.factory('billService', function($q) {
 
 });
