@@ -45,7 +45,7 @@ angular.module('icb.services', [])
         var insertQuery = "INSERT INTO products SET ?";
         connection.query(insertQuery, product, function(err, res) {
             if (err) deferred.reject(err);
-            deferred.resolve(res);                       
+            deferred.resolve(res);
         });
         return deferred.promise;
     }
@@ -67,5 +67,15 @@ angular.module('icb.services', [])
 })
 
 .factory('billService', function($q) {
-
+    function printIt() {
+        var printer = require("node-thermal-printer");
+        printer.init('epson');
+        printer.alignCenter();
+        printer.print(window);
+        printer.cut();
+        printer.execute();
+    }
+    return {
+        printIt: printIt
+    };
 });

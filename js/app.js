@@ -65,7 +65,8 @@ angular.module('starter', ['ionic', 'icb.controllers', 'icb.services'])
                 controller: 'billsCtrl'
             }
         }
-    });
+    })
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/customers');
