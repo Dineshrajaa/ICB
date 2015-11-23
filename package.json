@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "main.js",
   "dependencies": {
-    "mysql": "^2.9.0"
+    "mysql": "^2.9.0",
+    "node-thermal-printer": "0.0.9"
   }
 }

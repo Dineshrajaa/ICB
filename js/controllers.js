@@ -163,7 +163,11 @@ angular.module('icb.controllers', [])
     $scope.listAllProducts();
 })
 
+/*<<<<<<< HEAD*/
 .controller('addBillCtrl', function($scope, billService, $sce) {
+// =======
+
+/*>>>>>>> 95b67adc2f687fa9836299ab934a42c60f7eb0a3*/
     $scope.sumUp = function() {
         var sum = 0;
         angular.forEach($scope.productsArray, function(value, key) {
@@ -180,6 +184,7 @@ angular.module('icb.controllers', [])
     };
     $scope.previewBill = function() {
         //$scope.openModal('previewModal');
+/*<<<<<<< HEAD*/
         //$scope.html ='<div class="row billHeader">< div class = "col-25" >< img src = "./img/logo.png"  height = "50px" width = "50px" / >< /div>';
         $scope.html = '<div class="row billHeader">\
     <div class="col-25">\
@@ -199,6 +204,21 @@ angular.module('icb.controllers', [])
                     //$scope.html='<h1>Dinesh</h1>';
         $scope.previewBillBlock = $sce.trustAsHtml($scope.html);
         //console.log($scope.bill.customer.shop_name);
+/*=======
+        $scope.previewBillBlock = '<div class="row billHeader">\
+         < div class = "col-25" > < img src = "./img/logo.png"\
+        height = "50px"\
+        width = "50px" / >\
+         < /div> < div class = "col-75 padding logo" >\
+          INDIRA THREAD BALLS < /div > \
+          < /div> < div class = "row billHeader" > \
+          < div class = "col" > \
+          < center > Contact: < strong > 7708898448 < /strong></center >\
+            < /div> < /div > < div class = "row" >\
+            < div class = "col-65" > To: < strong > < /strong></div >\
+            < div class = "col-35" > Date: < /div> < /div > ';
+        console.log($scope.bill.customer.shop_name);
+>>>>>>> 95b67adc2f687fa9836299ab934a42c60f7eb0a3*/
     };
 
 })

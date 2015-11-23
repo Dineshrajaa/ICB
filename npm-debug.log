@@ -1,423 +1,141 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node',
-1 verbose cli   '/usr/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'node-thermal-printer' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'dank-do-while' ]
 2 info using npm@3.3.12
 3 info using node@v5.0.0
 4 silly loadCurrentTree Starting
 5 silly install loadCurrentTree
 6 silly install readLocalPackageData
-7 silly fetchPackageMetaData node-thermal-printer
-8 silly fetchNamedPackageData node-thermal-printer
-9 silly mapToRegistry name node-thermal-printer
+7 silly fetchPackageMetaData dank-do-while
+8 silly fetchNamedPackageData dank-do-while
+9 silly mapToRegistry name dank-do-while
 10 silly mapToRegistry using default registry
 11 silly mapToRegistry registry https://registry.npmjs.org/
-12 silly mapToRegistry uri https://registry.npmjs.org/node-thermal-printer
-13 verbose request uri https://registry.npmjs.org/node-thermal-printer
+12 silly mapToRegistry uri https://registry.npmjs.org/dank-do-while
+13 verbose request uri https://registry.npmjs.org/dank-do-while
 14 verbose request no auth needed
-15 info attempt registry request try #1 at 3:11:26 PM
-16 verbose request id c5d498c70f30ddea
-17 http request GET https://registry.npmjs.org/node-thermal-printer
-18 http 200 https://registry.npmjs.org/node-thermal-printer
-19 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-19 verbose headers   etag: '"1JFAMOVKOSLWO5ZG6VUVAJ5RC"',
-19 verbose headers   'content-type': 'application/json',
-19 verbose headers   'cache-control': 'max-age=60',
-19 verbose headers   'content-length': '14472',
-19 verbose headers   'accept-ranges': 'bytes',
-19 verbose headers   date: 'Mon, 23 Nov 2015 09:41:28 GMT',
-19 verbose headers   via: '1.1 varnish',
-19 verbose headers   age: '0',
-19 verbose headers   connection: 'keep-alive',
-19 verbose headers   'x-served-by': 'cache-sin6921-SIN',
-19 verbose headers   'x-cache': 'MISS',
-19 verbose headers   'x-cache-hits': '0',
-19 verbose headers   'x-timer': 'S1448271687.938671,VS0,VE405',
-19 verbose headers   vary: 'Accept' }
-20 silly get cb [ 200,
-20 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-20 silly get     etag: '"1JFAMOVKOSLWO5ZG6VUVAJ5RC"',
-20 silly get     'content-type': 'application/json',
-20 silly get     'cache-control': 'max-age=60',
-20 silly get     'content-length': '14472',
-20 silly get     'accept-ranges': 'bytes',
-20 silly get     date: 'Mon, 23 Nov 2015 09:41:28 GMT',
-20 silly get     via: '1.1 varnish',
-20 silly get     age: '0',
-20 silly get     connection: 'keep-alive',
-20 silly get     'x-served-by': 'cache-sin6921-SIN',
-20 silly get     'x-cache': 'MISS',
-20 silly get     'x-cache-hits': '0',
-20 silly get     'x-timer': 'S1448271687.938671,VS0,VE405',
-20 silly get     vary: 'Accept' } ]
-21 verbose get saving node-thermal-printer to /home/dinesh/.npm/registry.npmjs.org/node-thermal-printer/.cache.json
-22 silly install normalizeTree
-23 silly loadCurrentTree Finishing
-24 silly loadIdealTree Starting
-25 silly install loadIdealTree
-26 silly cloneCurrentTree Starting
-27 silly install cloneCurrentTreeToIdealTree
-28 silly cloneCurrentTree Finishing
-29 silly loadShrinkwrap Starting
-30 silly install loadShrinkwrap
-31 silly loadShrinkwrap Finishing
-32 silly loadAllDepsIntoIdealTree Starting
-33 silly install loadAllDepsIntoIdealTree
-34 silly resolveWithNewModule node-thermal-printer@0.0.11 checking installable status
-35 silly cache add args [ 'node-thermal-printer', null ]
-36 verbose cache add spec node-thermal-printer
-37 silly cache add parsed spec Result {
-37 silly cache add   raw: 'node-thermal-printer',
-37 silly cache add   scope: null,
-37 silly cache add   name: 'node-thermal-printer',
-37 silly cache add   rawSpec: '',
-37 silly cache add   spec: '*',
-37 silly cache add   type: 'range' }
-38 silly addNamed node-thermal-printer@*
-39 verbose addNamed "*" is a valid semver range for node-thermal-printer
-40 silly addNameRange { name: 'node-thermal-printer', range: '*', hasData: false }
-41 silly mapToRegistry name node-thermal-printer
-42 silly mapToRegistry using default registry
-43 silly mapToRegistry registry https://registry.npmjs.org/
-44 silly mapToRegistry uri https://registry.npmjs.org/node-thermal-printer
-45 verbose addNameRange registry:https://registry.npmjs.org/node-thermal-printer not in flight; fetching
-46 verbose get https://registry.npmjs.org/node-thermal-printer not expired, no request
-47 silly addNameRange number 2 { name: 'node-thermal-printer', range: '*', hasData: true }
-48 silly addNameRange versions [ 'node-thermal-printer',
-48 silly addNameRange   [ '0.0.1',
-48 silly addNameRange     '0.0.2',
-48 silly addNameRange     '0.0.3',
-48 silly addNameRange     '0.0.4',
-48 silly addNameRange     '0.0.5',
-48 silly addNameRange     '0.0.6',
-48 silly addNameRange     '0.0.7',
-48 silly addNameRange     '0.0.8',
-48 silly addNameRange     '0.0.9',
-48 silly addNameRange     '0.0.11' ] ]
-49 silly addNamed node-thermal-printer@0.0.11
-50 verbose addNamed "0.0.11" is a plain semver version for node-thermal-printer
-51 silly mapToRegistry name node-thermal-printer
-52 silly mapToRegistry using default registry
-53 silly mapToRegistry registry https://registry.npmjs.org/
-54 silly mapToRegistry uri https://registry.npmjs.org/node-thermal-printer
-55 verbose addRemoteTarball https://registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.11.tgz not in flight; adding
-56 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.11.tgz',
-56 verbose addRemoteTarball   '0f4d089669ee34567f6d85a32359353d5a74bc97' ]
-57 info retry fetch attempt 1 at 3:11:28 PM
-58 info attempt registry request try #1 at 3:11:28 PM
-59 http fetch GET https://registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.11.tgz
-60 http fetch 200 https://registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.11.tgz
-61 silly fetchAndShaCheck shasum 0f4d089669ee34567f6d85a32359353d5a74bc97
-62 verbose addTmpTarball /tmp/npm-4178-180e33d3/registry.npmjs.org/node-thermal-printer/-/node-thermal-printer-0.0.11.tgz not in flight; adding
-63 verbose addTmpTarball already have metadata; skipping unpack for node-thermal-printer@0.0.11
-64 silly cache afterAdd node-thermal-printer@0.0.11
-65 verbose afterAdd /home/dinesh/.npm/node-thermal-printer/0.0.11/package/package.json not in flight; writing
-66 verbose afterAdd /home/dinesh/.npm/node-thermal-printer/0.0.11/package/package.json written
-67 silly fetchNamedPackageData net
-68 silly mapToRegistry name net
-69 silly mapToRegistry using default registry
-70 silly mapToRegistry registry https://registry.npmjs.org/
-71 silly mapToRegistry uri https://registry.npmjs.org/net
-72 silly fetchNamedPackageData write-file-queue
-73 silly mapToRegistry name write-file-queue
-74 silly mapToRegistry using default registry
-75 silly mapToRegistry registry https://registry.npmjs.org/
-76 silly mapToRegistry uri https://registry.npmjs.org/write-file-queue
-77 verbose request uri https://registry.npmjs.org/net
-78 verbose request no auth needed
-79 info attempt registry request try #1 at 3:11:30 PM
-80 http request GET https://registry.npmjs.org/net
-81 verbose request uri https://registry.npmjs.org/write-file-queue
-82 verbose request no auth needed
-83 info attempt registry request try #1 at 3:11:30 PM
-84 http request GET https://registry.npmjs.org/write-file-queue
-85 http 200 https://registry.npmjs.org/write-file-queue
-86 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-86 verbose headers   etag: '"9608Q93TUXYCVK1OLIS0P207T"',
-86 verbose headers   'content-type': 'application/json',
-86 verbose headers   'cache-control': 'max-age=60',
-86 verbose headers   'content-length': '3788',
-86 verbose headers   'accept-ranges': 'bytes',
-86 verbose headers   date: 'Mon, 23 Nov 2015 09:41:31 GMT',
-86 verbose headers   via: '1.1 varnish',
-86 verbose headers   age: '0',
-86 verbose headers   connection: 'keep-alive',
-86 verbose headers   'x-served-by': 'cache-sin6922-SIN',
-86 verbose headers   'x-cache': 'MISS',
-86 verbose headers   'x-cache-hits': '0',
-86 verbose headers   'x-timer': 'S1448271691.112271,VS0,VE209',
-86 verbose headers   vary: 'Accept' }
-87 silly get cb [ 200,
-87 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-87 silly get     etag: '"9608Q93TUXYCVK1OLIS0P207T"',
-87 silly get     'content-type': 'application/json',
-87 silly get     'cache-control': 'max-age=60',
-87 silly get     'content-length': '3788',
-87 silly get     'accept-ranges': 'bytes',
-87 silly get     date: 'Mon, 23 Nov 2015 09:41:31 GMT',
-87 silly get     via: '1.1 varnish',
-87 silly get     age: '0',
-87 silly get     connection: 'keep-alive',
-87 silly get     'x-served-by': 'cache-sin6922-SIN',
-87 silly get     'x-cache': 'MISS',
-87 silly get     'x-cache-hits': '0',
-87 silly get     'x-timer': 'S1448271691.112271,VS0,VE209',
-87 silly get     vary: 'Accept' } ]
-88 verbose get saving write-file-queue to /home/dinesh/.npm/registry.npmjs.org/write-file-queue/.cache.json
-89 silly resolveWithNewModule write-file-queue@0.0.1 checking installable status
-90 silly cache add args [ 'write-file-queue@0.0.1', null ]
-91 verbose cache add spec write-file-queue@0.0.1
-92 silly cache add parsed spec Result {
-92 silly cache add   raw: 'write-file-queue@0.0.1',
-92 silly cache add   scope: null,
-92 silly cache add   name: 'write-file-queue',
-92 silly cache add   rawSpec: '0.0.1',
-92 silly cache add   spec: '0.0.1',
-92 silly cache add   type: 'version' }
-93 silly addNamed write-file-queue@0.0.1
-94 verbose addNamed "0.0.1" is a plain semver version for write-file-queue
-95 silly mapToRegistry name write-file-queue
-96 silly mapToRegistry using default registry
-97 silly mapToRegistry registry https://registry.npmjs.org/
-98 silly mapToRegistry uri https://registry.npmjs.org/write-file-queue
-99 verbose addNameVersion registry:https://registry.npmjs.org/write-file-queue not in flight; fetching
-100 verbose get https://registry.npmjs.org/write-file-queue not expired, no request
-101 silly mapToRegistry name write-file-queue
-102 silly mapToRegistry using default registry
-103 silly mapToRegistry registry https://registry.npmjs.org/
-104 silly mapToRegistry uri https://registry.npmjs.org/write-file-queue
-105 verbose addRemoteTarball https://registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz not in flight; adding
-106 verbose addRemoteTarball [ 'https://registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz',
-106 verbose addRemoteTarball   '3764f614451806e9612c969b770d830a6a8115e9' ]
-107 info retry fetch attempt 1 at 3:11:31 PM
-108 info attempt registry request try #1 at 3:11:31 PM
-109 http fetch GET https://registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz
-110 http fetch 200 https://registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz
-111 silly fetchAndShaCheck shasum 3764f614451806e9612c969b770d830a6a8115e9
-112 verbose addTmpTarball /tmp/npm-4178-180e33d3/registry.npmjs.org/write-file-queue/-/write-file-queue-0.0.1.tgz not in flight; adding
-113 verbose addTmpTarball already have metadata; skipping unpack for write-file-queue@0.0.1
-114 silly cache afterAdd write-file-queue@0.0.1
-115 verbose afterAdd /home/dinesh/.npm/write-file-queue/0.0.1/package/package.json not in flight; writing
-116 verbose afterAdd /home/dinesh/.npm/write-file-queue/0.0.1/package/package.json written
-117 http 200 https://registry.npmjs.org/net
-118 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-118 verbose headers   etag: '"F1T7IESIXW7108ZHFCGT1L79A"',
-118 verbose headers   'content-type': 'application/json',
-118 verbose headers   'cache-control': 'max-age=60',
-118 verbose headers   'content-length': '3141',
-118 verbose headers   'accept-ranges': 'bytes',
-118 verbose headers   date: 'Mon, 23 Nov 2015 09:41:37 GMT',
-118 verbose headers   via: '1.1 varnish',
-118 verbose headers   age: '0',
-118 verbose headers   connection: 'keep-alive',
-118 verbose headers   'x-served-by': 'cache-sin6921-SIN',
-118 verbose headers   'x-cache': 'MISS',
-118 verbose headers   'x-cache-hits': '0',
-118 verbose headers   'x-timer': 'S1448271696.642248,VS0,VE821',
-118 verbose headers   vary: 'Accept' }
-119 silly get cb [ 200,
-119 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-119 silly get     etag: '"F1T7IESIXW7108ZHFCGT1L79A"',
-119 silly get     'content-type': 'application/json',
-119 silly get     'cache-control': 'max-age=60',
-119 silly get     'content-length': '3141',
-119 silly get     'accept-ranges': 'bytes',
-119 silly get     date: 'Mon, 23 Nov 2015 09:41:37 GMT',
-119 silly get     via: '1.1 varnish',
-119 silly get     age: '0',
-119 silly get     connection: 'keep-alive',
-119 silly get     'x-served-by': 'cache-sin6921-SIN',
-119 silly get     'x-cache': 'MISS',
-119 silly get     'x-cache-hits': '0',
-119 silly get     'x-timer': 'S1448271696.642248,VS0,VE821',
-119 silly get     vary: 'Accept' } ]
-120 verbose get saving net to /home/dinesh/.npm/registry.npmjs.org/net/.cache.json
-121 silly resolveWithNewModule net@1.0.2 checking installable status
-122 silly cache add args [ 'net@^1.0.2', null ]
-123 verbose cache add spec net@^1.0.2
-124 silly cache add parsed spec Result {
-124 silly cache add   raw: 'net@^1.0.2',
-124 silly cache add   scope: null,
-124 silly cache add   name: 'net',
-124 silly cache add   rawSpec: '^1.0.2',
-124 silly cache add   spec: '>=1.0.2 <2.0.0',
-124 silly cache add   type: 'range' }
-125 silly addNamed net@>=1.0.2 <2.0.0
-126 verbose addNamed ">=1.0.2 <2.0.0" is a valid semver range for net
-127 silly addNameRange { name: 'net', range: '>=1.0.2 <2.0.0', hasData: false }
-128 silly mapToRegistry name net
-129 silly mapToRegistry using default registry
-130 silly mapToRegistry registry https://registry.npmjs.org/
-131 silly mapToRegistry uri https://registry.npmjs.org/net
-132 verbose addNameRange registry:https://registry.npmjs.org/net not in flight; fetching
-133 verbose get https://registry.npmjs.org/net not expired, no request
-134 silly addNameRange number 2 { name: 'net', range: '>=1.0.2 <2.0.0', hasData: true }
-135 silly addNameRange versions [ 'net', [ '1.0.0', '1.0.1', '1.0.2' ] ]
-136 silly addNamed net@1.0.2
-137 verbose addNamed "1.0.2" is a plain semver version for net
-138 silly mapToRegistry name net
-139 silly mapToRegistry using default registry
-140 silly mapToRegistry registry https://registry.npmjs.org/
-141 silly mapToRegistry uri https://registry.npmjs.org/net
-142 verbose addRemoteTarball https://registry.npmjs.org/net/-/net-1.0.2.tgz not in flight; adding
-143 verbose addRemoteTarball [ 'https://registry.npmjs.org/net/-/net-1.0.2.tgz',
-143 verbose addRemoteTarball   'd1757ec9a7fb2371d83cf4755ce3e27e10829388' ]
-144 info retry fetch attempt 1 at 3:11:37 PM
-145 info attempt registry request try #1 at 3:11:37 PM
-146 http fetch GET https://registry.npmjs.org/net/-/net-1.0.2.tgz
-147 http fetch 200 https://registry.npmjs.org/net/-/net-1.0.2.tgz
-148 silly fetchAndShaCheck shasum d1757ec9a7fb2371d83cf4755ce3e27e10829388
-149 verbose addTmpTarball /tmp/npm-4178-180e33d3/registry.npmjs.org/net/-/net-1.0.2.tgz not in flight; adding
-150 verbose addTmpTarball already have metadata; skipping unpack for net@1.0.2
-151 silly cache afterAdd net@1.0.2
-152 verbose afterAdd /home/dinesh/.npm/net/1.0.2/package/package.json not in flight; writing
-153 verbose afterAdd /home/dinesh/.npm/net/1.0.2/package/package.json written
-154 silly fetchNamedPackageData dank-do-while
-155 silly mapToRegistry name dank-do-while
-156 silly mapToRegistry using default registry
-157 silly mapToRegistry registry https://registry.npmjs.org/
-158 silly mapToRegistry uri https://registry.npmjs.org/dank-do-while
-159 verbose request uri https://registry.npmjs.org/dank-do-while
-160 verbose request no auth needed
-161 info attempt registry request try #1 at 3:11:37 PM
-162 http request GET https://registry.npmjs.org/dank-do-while
-163 http 200 https://registry.npmjs.org/dank-do-while
-164 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-164 verbose headers   etag: '"4HHIZIQO14KX53IERO34YGY90"',
-164 verbose headers   'content-type': 'application/json',
-164 verbose headers   'cache-control': 'max-age=60',
-164 verbose headers   'content-length': '5019',
-164 verbose headers   'accept-ranges': 'bytes',
-164 verbose headers   date: 'Mon, 23 Nov 2015 09:41:38 GMT',
-164 verbose headers   via: '1.1 varnish',
-164 verbose headers   age: '0',
-164 verbose headers   connection: 'keep-alive',
-164 verbose headers   'x-served-by': 'cache-sin6924-SIN',
-164 verbose headers   'x-cache': 'MISS',
-164 verbose headers   'x-cache-hits': '0',
-164 verbose headers   'x-timer': 'S1448271698.135902,VS0,VE214',
-164 verbose headers   vary: 'Accept' }
-165 silly get cb [ 200,
-165 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-165 silly get     etag: '"4HHIZIQO14KX53IERO34YGY90"',
-165 silly get     'content-type': 'application/json',
-165 silly get     'cache-control': 'max-age=60',
-165 silly get     'content-length': '5019',
-165 silly get     'accept-ranges': 'bytes',
-165 silly get     date: 'Mon, 23 Nov 2015 09:41:38 GMT',
-165 silly get     via: '1.1 varnish',
-165 silly get     age: '0',
-165 silly get     connection: 'keep-alive',
-165 silly get     'x-served-by': 'cache-sin6924-SIN',
-165 silly get     'x-cache': 'MISS',
-165 silly get     'x-cache-hits': '0',
-165 silly get     'x-timer': 'S1448271698.135902,VS0,VE214',
-165 silly get     vary: 'Accept' } ]
-166 verbose get saving dank-do-while to /home/dinesh/.npm/registry.npmjs.org/dank-do-while/.cache.json
-167 silly resolveWithNewModule dank-do-while@0.1.2 checking installable status
-168 silly cache add args [ 'dank-do-while@^0.1.2', null ]
-169 verbose cache add spec dank-do-while@^0.1.2
-170 silly cache add parsed spec Result {
-170 silly cache add   raw: 'dank-do-while@^0.1.2',
-170 silly cache add   scope: null,
-170 silly cache add   name: 'dank-do-while',
-170 silly cache add   rawSpec: '^0.1.2',
-170 silly cache add   spec: '>=0.1.2 <0.2.0',
-170 silly cache add   type: 'range' }
-171 silly addNamed dank-do-while@>=0.1.2 <0.2.0
-172 verbose addNamed ">=0.1.2 <0.2.0" is a valid semver range for dank-do-while
-173 silly addNameRange { name: 'dank-do-while',
-173 silly addNameRange   range: '>=0.1.2 <0.2.0',
-173 silly addNameRange   hasData: false }
-174 silly mapToRegistry name dank-do-while
-175 silly mapToRegistry using default registry
-176 silly mapToRegistry registry https://registry.npmjs.org/
-177 silly mapToRegistry uri https://registry.npmjs.org/dank-do-while
-178 verbose addNameRange registry:https://registry.npmjs.org/dank-do-while not in flight; fetching
-179 verbose get https://registry.npmjs.org/dank-do-while not expired, no request
-180 silly addNameRange number 2 { name: 'dank-do-while', range: '>=0.1.2 <0.2.0', hasData: true }
-181 silly addNameRange versions [ 'dank-do-while', [ '0.1.0', '0.1.1', '0.1.2' ] ]
-182 silly addNamed dank-do-while@0.1.2
-183 verbose addNamed "0.1.2" is a plain semver version for dank-do-while
-184 silly mapToRegistry name dank-do-while
-185 silly mapToRegistry using default registry
-186 silly mapToRegistry registry https://registry.npmjs.org/
-187 silly mapToRegistry uri https://registry.npmjs.org/dank-do-while
-188 verbose addRemoteTarball https://registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz not in flight; adding
-189 verbose addRemoteTarball [ 'https://registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz',
-189 verbose addRemoteTarball   '819b25937b9777657b56f5172ad856596fcd0c84' ]
-190 info retry fetch attempt 1 at 3:11:38 PM
-191 info attempt registry request try #1 at 3:11:38 PM
-192 http fetch GET https://registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz
-193 http fetch 200 https://registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz
-194 silly fetchAndShaCheck shasum 819b25937b9777657b56f5172ad856596fcd0c84
-195 verbose addTmpTarball /tmp/npm-4178-180e33d3/registry.npmjs.org/dank-do-while/-/dank-do-while-0.1.2.tgz not in flight; adding
-196 verbose addTmpTarball already have metadata; skipping unpack for dank-do-while@0.1.2
-197 silly cache afterAdd dank-do-while@0.1.2
-198 verbose afterAdd /home/dinesh/.npm/dank-do-while/0.1.2/package/package.json not in flight; writing
-199 verbose afterAdd /home/dinesh/.npm/dank-do-while/0.1.2/package/package.json written
-200 silly loadAllDepsIntoIdealTree Finishing
-201 silly idealTree:prePrune Indira-Bills@0.1.0
-201 silly idealTree:prePrune ├── bignumber.js@2.0.7
-201 silly idealTree:prePrune ├── core-util-is@1.0.2
-201 silly idealTree:prePrune ├── dank-do-while@0.1.2
-201 silly idealTree:prePrune ├── inherits@2.0.1
-201 silly idealTree:prePrune ├── isarray@0.0.1
-201 silly idealTree:prePrune ├── mysql@2.9.0
-201 silly idealTree:prePrune ├── net@1.0.2
-201 silly idealTree:prePrune ├── node-thermal-printer@0.0.11
-201 silly idealTree:prePrune ├── readable-stream@1.1.13
-201 silly idealTree:prePrune ├── string_decoder@0.10.31
-201 silly idealTree:prePrune └── write-file-queue@0.0.1
-202 silly loadIdealTree Finishing
-203 silly currentTree Indira-Bills@0.1.0
-203 silly currentTree ├── bignumber.js@2.0.7
-203 silly currentTree ├── core-util-is@1.0.2
-203 silly currentTree ├── inherits@2.0.1
-203 silly currentTree ├── isarray@0.0.1
-203 silly currentTree ├── mysql@2.9.0
-203 silly currentTree ├── readable-stream@1.1.13
-203 silly currentTree └── string_decoder@0.10.31
-204 silly idealTree Indira-Bills@0.1.0
-204 silly idealTree ├── bignumber.js@2.0.7
-204 silly idealTree ├── core-util-is@1.0.2
-204 silly idealTree ├── dank-do-while@0.1.2
-204 silly idealTree ├── inherits@2.0.1
-204 silly idealTree ├── isarray@0.0.1
-204 silly idealTree ├── mysql@2.9.0
-204 silly idealTree ├── net@1.0.2
-204 silly idealTree ├── node-thermal-printer@0.0.11
-204 silly idealTree ├── readable-stream@1.1.13
-204 silly idealTree ├── string_decoder@0.10.31
-204 silly idealTree └── write-file-queue@0.0.1
-205 silly generateActionsToTake Starting
-206 silly install generateActionsToTake
-207 warn checkPermissions Missing write access to /home/dinesh/Development/Learning/ICB/node_modules
-208 silly rollbackFailedOptional Starting
-209 silly rollbackFailedOptional Finishing
-210 silly runTopLevelLifecycles Starting
-211 silly runTopLevelLifecycles Finishing
-212 silly install printInstalled
-213 warn EPACKAGEJSON Indira-Bills@0.1.0 No repository field.
-214 warn EPACKAGEJSON Indira-Bills@0.1.0 No license field.
-215 verbose stack Error: EACCES: permission denied, access '/home/dinesh/Development/Learning/ICB/node_modules'
-215 verbose stack     at Error (native)
-216 verbose cwd /home/dinesh/Development/Learning/ICB
-217 error Linux 3.18.24-1-MANJARO
-218 error argv "/usr/bin/node" "/usr/bin/npm" "install" "node-thermal-printer"
-219 error node v5.0.0
-220 error npm  v3.3.12
-221 error path /home/dinesh/Development/Learning/ICB/node_modules
-222 error code EACCES
-223 error errno -13
-224 error syscall access
-225 error Error: EACCES: permission denied, access '/home/dinesh/Development/Learning/ICB/node_modules'
-225 error     at Error (native)
-225 error  { [Error: EACCES: permission denied, access '/home/dinesh/Development/Learning/ICB/node_modules']
-225 error   errno: -13,
-225 error   code: 'EACCES',
-225 error   syscall: 'access',
-225 error   path: '/home/dinesh/Development/Learning/ICB/node_modules' }
-226 error Please try running this command again as root/Administrator.
-227 verbose exit [ -13, true ]
+15 info attempt registry request try #1 at 3:17:34 PM
+16 verbose request id 51fd2b762349f331
+17 verbose etag "4HHIZIQO14KX53IERO34YGY90"
+18 http request GET https://registry.npmjs.org/dank-do-while
+19 http 304 https://registry.npmjs.org/dank-do-while
+20 verbose headers { date: 'Mon, 23 Nov 2015 09:47:36 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   'cache-control': 'max-age=60',
+20 verbose headers   etag: '"4HHIZIQO14KX53IERO34YGY90"',
+20 verbose headers   age: '0',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-sin6926-SIN',
+20 verbose headers   'x-cache': 'MISS',
+20 verbose headers   'x-cache-hits': '0',
+20 verbose headers   'x-timer': 'S1448272056.692522,VS0,VE1038',
+20 verbose headers   vary: 'Accept' }
+21 silly get cb [ 304,
+21 silly get   { date: 'Mon, 23 Nov 2015 09:47:36 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     'cache-control': 'max-age=60',
+21 silly get     etag: '"4HHIZIQO14KX53IERO34YGY90"',
+21 silly get     age: '0',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-sin6926-SIN',
+21 silly get     'x-cache': 'MISS',
+21 silly get     'x-cache-hits': '0',
+21 silly get     'x-timer': 'S1448272056.692522,VS0,VE1038',
+21 silly get     vary: 'Accept' } ]
+22 verbose etag https://registry.npmjs.org/dank-do-while from cache
+23 verbose get saving dank-do-while to /home/dinesh/.npm/registry.npmjs.org/dank-do-while/.cache.json
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule dank-do-while@0.1.2 checking installable status
+37 silly cache add args [ 'dank-do-while', null ]
+38 verbose cache add spec dank-do-while
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'dank-do-while',
+39 silly cache add   scope: null,
+39 silly cache add   name: 'dank-do-while',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: '*',
+39 silly cache add   type: 'range' }
+40 silly addNamed dank-do-while@*
+41 verbose addNamed "*" is a valid semver range for dank-do-while
+42 silly addNameRange { name: 'dank-do-while', range: '*', hasData: false }
+43 silly mapToRegistry name dank-do-while
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/dank-do-while
+47 verbose addNameRange registry:https://registry.npmjs.org/dank-do-while not in flight; fetching
+48 verbose get https://registry.npmjs.org/dank-do-while not expired, no request
+49 silly addNameRange number 2 { name: 'dank-do-while', range: '*', hasData: true }
+50 silly addNameRange versions [ 'dank-do-while', [ '0.1.0', '0.1.1', '0.1.2' ] ]
+51 silly addNamed dank-do-while@0.1.2
+52 verbose addNamed "0.1.2" is a plain semver version for dank-do-while
+53 silly cache afterAdd dank-do-while@0.1.2
+54 verbose afterAdd /home/dinesh/.npm/dank-do-while/0.1.2/package/package.json not in flight; writing
+55 verbose afterAdd /home/dinesh/.npm/dank-do-while/0.1.2/package/package.json written
+56 silly loadAllDepsIntoIdealTree Finishing
+57 silly idealTree:prePrune Indira-Bills@0.1.0
+57 silly idealTree:prePrune ├── bignumber.js@2.0.7
+57 silly idealTree:prePrune ├── core-util-is@1.0.2
+57 silly idealTree:prePrune ├── dank-do-while@0.1.2
+57 silly idealTree:prePrune ├── inherits@2.0.1
+57 silly idealTree:prePrune ├── isarray@0.0.1
+57 silly idealTree:prePrune ├── mysql@2.9.0
+57 silly idealTree:prePrune ├── readable-stream@1.1.13
+57 silly idealTree:prePrune └── string_decoder@0.10.31
+58 silly loadIdealTree Finishing
+59 silly currentTree Indira-Bills@0.1.0
+59 silly currentTree ├── bignumber.js@2.0.7
+59 silly currentTree ├── core-util-is@1.0.2
+59 silly currentTree ├── inherits@2.0.1
+59 silly currentTree ├── isarray@0.0.1
+59 silly currentTree ├── mysql@2.9.0
+59 silly currentTree ├── readable-stream@1.1.13
+59 silly currentTree └── string_decoder@0.10.31
+60 silly idealTree Indira-Bills@0.1.0
+60 silly idealTree ├── bignumber.js@2.0.7
+60 silly idealTree ├── core-util-is@1.0.2
+60 silly idealTree ├── dank-do-while@0.1.2
+60 silly idealTree ├── inherits@2.0.1
+60 silly idealTree ├── isarray@0.0.1
+60 silly idealTree ├── mysql@2.9.0
+60 silly idealTree ├── readable-stream@1.1.13
+60 silly idealTree └── string_decoder@0.10.31
+61 silly generateActionsToTake Starting
+62 silly install generateActionsToTake
+63 warn checkPermissions Missing write access to /home/dinesh/Development/Learning/ICB/node_modules
+64 silly rollbackFailedOptional Starting
+65 silly rollbackFailedOptional Finishing
+66 silly runTopLevelLifecycles Starting
+67 silly runTopLevelLifecycles Finishing
+68 silly install printInstalled
+69 warn EPACKAGEJSON Indira-Bills@0.1.0 No repository field.
+70 warn EPACKAGEJSON Indira-Bills@0.1.0 No license field.
+71 verbose stack Error: EACCES: permission denied, access '/home/dinesh/Development/Learning/ICB/node_modules'
+71 verbose stack     at Error (native)
+72 verbose cwd /home/dinesh/Development/Learning/ICB
+73 error Linux 3.18.24-1-MANJARO
+74 error argv "/usr/bin/node" "/usr/bin/npm" "install" "dank-do-while"
+75 error node v5.0.0
+76 error npm  v3.3.12
+77 error path /home/dinesh/Development/Learning/ICB/node_modules
+78 error code EACCES
+79 error errno -13
+80 error syscall access
+81 error Error: EACCES: permission denied, access '/home/dinesh/Development/Learning/ICB/node_modules'
+81 error     at Error (native)
+81 error  { [Error: EACCES: permission denied, access '/home/dinesh/Development/Learning/ICB/node_modules']
+81 error   errno: -13,
+81 error   code: 'EACCES',
+81 error   syscall: 'access',
+81 error   path: '/home/dinesh/Development/Learning/ICB/node_modules' }
+82 error Please try running this command again as root/Administrator.
+83 verbose exit [ -13, true ]
