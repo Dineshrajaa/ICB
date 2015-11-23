@@ -1,6 +1,6 @@
 <ion-view view-title="Bills">
     <ion-nav-buttons side="right">
-        <button class="button button-royal" ng-click="openModal();"><i class="icon ion-android-add"></i></button>
+        <button class="button button-royal" ng-click="openModal('addBillModal');"><i class="icon ion-android-add"></i></button>
     </ion-nav-buttons>
     <ion-content>
         <ion-list>
@@ -11,14 +11,15 @@
     <ion-modal-view>
         <ion-header-bar class="bar-royal">
             <h1 class="title">Add Bill</h1>
-            <button class="button button-assertive" ng-click="closeModal();"><i class="icon ion-close-round">Close</i></button>
+            <button class="button button-assertive" ng-click="closeModal('addBillModal');"><i class="icon ion-close-round">Close</i></button>
         </ion-header-bar>
         <ion-content ng-controller="addBillCtrl">
             <ion-list>
                 <label class="item item-input">
                     <span class="input-label">To</span>
-                    <select ng-model="bill.customer">
-                        <option ng-repeat='customer in customersArray' value="{{customer.id}}">{{customer.shop_name}}</option>
+                    <select ng-model="bill.customer" ng-options="customer as customer.shop_name for customer in customersArray">
+                        /*<option ng-repeat='customer in customersArray' value="{{customer.id}}">{{customer.shop_name}}</option>
+*/
                     </select>
                 </label>
                 <label class="item item-input" ng-repeat='product in productsArray'>
@@ -29,6 +30,32 @@
                 </label>
                 <label class="item item-input" style="float:right;">Total:{{sumUp()}}</label>
             </ion-list>
+            <br/>
+            <br/>
+            <div class="button-bar">
+                <button class="button button-balanced" ng-click="previewBill();">Preview</button>
+                <button class="button button-assertive">Reset</button>
+            </div>
+            <div ng-bind-html="previewBillBlock"></div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+<script type="text/ng-template" id="bill-preview.html">
+    <ion-modal-view>
+        <ion-content ng-controller="addBillCtrl">
+            <div class="row billHeader">
+                <div class="col-25"><img src="./img/logo.png" height="50px" width="50px" /></div>
+                <div class="col-75 padding logo">INDIRA THREAD BALLS</div>
+            </div>
+            <div class="row billHeader">
+                <div class="col">
+                    <center>Contact:<strong>7708898448</strong></center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-65">To:<strong>{{bill.customer.shop_name}}</strong></div>
+                <div class="col-35">Date:</div>
+            </div>
         </ion-content>
     </ion-modal-view>
 </script>

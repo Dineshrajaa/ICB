@@ -8,3 +8,20 @@
     border-radius: 4px;
     background: gray;
 }
+
+.row {
+    background: white;
+    border: thin solid black;
+}
+
+.billHeader {
+    background: white;
+    border: thick solid black;
+}
+
+.logo {
+    font-family: "Lucida Calligraphy";
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+}

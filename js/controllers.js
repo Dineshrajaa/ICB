@@ -125,16 +125,28 @@ angular.module('icb.controllers', [])
         scope: $scope,
         animation: "slide-in-up"
     }).then(function(modal) {
-        $scope.modal = modal;
+        $scope.addBillModal = modal;
     });
-
-    $scope.openModal = function() {
-        $scope.modal.show();
+    $ionicModal.fromTemplateUrl('bill-preview.html', {
+        scope: $scope,
+        animation: "slide-in-up"
+    }).then(function(modal) {
+        $scope.previewModal = modal;
+    });
+    $scope.openModal = function(modalName) {
+        if (modalName === 'addBillModal')
+            $scope.addBillModal.show();
+        else if (modalName == 'previewModal')
+            $scope.previewModal.show();
     };
 
-    $scope.closeModal = function() {
-        $scope.modal.hide();
+    $scope.closeModal = function(modalName) {
+        if (modalName === 'addBillModal')
+            $scope.addBillModal.hide();
+        else if (modalName == 'previewModal')
+            $scope.previewModal.hide();
     };
+
     $scope.listAllCustomers = function() {
         customerService.listAllCustomers().then(function(customers) {
             $scope.customersArray = [].concat(customers);
@@ -151,18 +163,42 @@ angular.module('icb.controllers', [])
     $scope.listAllProducts();
 })
 
-.controller('addBillCtrl', function($scope) {
+.controller('addBillCtrl', function($scope, billService, $sce) {
     $scope.sumUp = function() {
         var sum = 0;
-        /*for (var i = 0; i<$scope.productsArray.length; i++) {
-            sum += parseInt($scope.productsArray[i].pprice)*parseInt($scope.productsArray[i].pquantity);
-        }*/
-
         angular.forEach($scope.productsArray, function(value, key) {
-            sum = sum + (parseInt(value.pprice) * parseInt(value.pquantity)||0);
+            sum = sum + (parseInt(value.pprice) * parseInt(value.pquantity) || 0);
         });
-        console.log(sum);
+        //console.log(sum);
         return isNaN(sum) ? 0 : sum;
-    }
+    };
+    $scope.printBill = function() {
+        /*var popupWin = window.open('', '_blank', 'width=600,height=600,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
+        popupWin.document.write('<!DOCTYPE html><html><head>' + '<link rel="stylesheet" type="text/css" href="style.css" />' + '</head><body onload="window.print()"><div class="reward-body">Hello Dinesh</div></body></html>');*/
+        //window.print();
+        billService.printIt();
+    };
+    $scope.previewBill = function() {
+        //$scope.openModal('previewModal');
+        //$scope.html ='<div class="row billHeader">< div class = "col-25" >< img src = "./img/logo.png"  height = "50px" width = "50px" / >< /div>';
+        $scope.html = '<div class="row billHeader">\
+    <div class="col-25">\
+        <img src="./img/logo.png" height="50px" width="50px" />\
+    </div>\
+    <div class="col-75 padding logo">INDIRA THREAD BALLS </div>\
+    <div class="row billHeader">\
+        <div class="col">\
+            <center> Contact: <strong> 7708898448 </strong></center>\
+        </div>\
+    </div>\
+    <div class="row">\
+        <div class="col-65"> To: <strong> </strong></div>\
+        <div class="col-35"> Date: </div>\
+    </div>\
+</div> ';
+                    //$scope.html='<h1>Dinesh</h1>';
+        $scope.previewBillBlock = $sce.trustAsHtml($scope.html);
+        //console.log($scope.bill.customer.shop_name);
+    };
 
 })
